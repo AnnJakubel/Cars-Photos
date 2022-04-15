@@ -1,5 +1,7 @@
-package ee.annjakubel.cars;
+package ee.annjakubel.cars.controller;
 
+import ee.annjakubel.cars.model.Car;
+import ee.annjakubel.cars.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package ee.annjakubel.cars;
+package ee.annjakubel.cars.controller;
 
 import org.springframework.web.bind.annotation.*;
 

@@ -1,5 +1,6 @@
-package ee.annjakubel.cars;
+package ee.annjakubel.cars.repository;
 
+import ee.annjakubel.cars.model.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

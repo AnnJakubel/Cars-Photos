@@ -1,4 +1,4 @@
-package ee.annjakubel.cars;
+package ee.annjakubel.cars.model;
 
 import lombok.*;
 
