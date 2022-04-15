@@ -1,6 +1,8 @@
 package ee.annjakubel.cars.controller;
 
+import ee.annjakubel.cars.model.input.PhotoResponse;
 import ee.annjakubel.cars.model.output.PhotoData;
+import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,7 +34,7 @@ public class PhotoController {
         String url = "https://jsonplaceholder.typicode.com/photos";
 
         RestTemplate restTemplate = new RestTemplate(); //v6imaldab teha HTTP p2ringuid
-        restTemplate.exchange(url);
+        restTemplate.exchange(url, HttpMethod.POST, null, PhotoResponse.class);
 
 
         return "";
