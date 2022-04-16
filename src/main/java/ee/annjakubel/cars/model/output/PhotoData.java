@@ -2,6 +2,7 @@ package ee.annjakubel.cars.model.output;
 
 import lombok.Data;
 
+
 @Data
 public class PhotoData {
     private int albumId;
