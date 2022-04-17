@@ -17,7 +17,7 @@ public class PhotoController {
     List<PhotoData> allPhotos = new ArrayList<>(); //list kuhu fotod k6ik l2hevad
 
     @GetMapping("photos")
-    public String getPhotos() {
+    public ResponseEntity<PhotoResponse[]> getPhotos() {
 
         /*{
             "albumId": 1,
@@ -34,13 +34,9 @@ public class PhotoController {
         String url = "https://jsonplaceholder.typicode.com/photos";
 
         RestTemplate restTemplate = new RestTemplate(); //v6imaldab teha HTTP p2ringuid
-        ResponseEntity<PhotoResponse[]> response = restTemplate.exchange(url, HttpMethod.POST, null, PhotoResponse[].class);
+        ResponseEntity<PhotoResponse[]> response = restTemplate.exchange(url, HttpMethod.GET, null, PhotoResponse[].class);
 
-        if (response.getStatusCodeValue() == 201) {
-            return response.getBody().toString();
-        }
-
-        return "";
+        return response;
 
     }
 }
